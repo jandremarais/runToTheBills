@@ -4,17 +4,37 @@ My Investec 2021 Q4 Transfer API Hackathon submission
 
 ## Setup
 
-create .env file
+In addition the the Investec Transfer API, you'll need access the a [Strava developer account](https://developers.strava.com/docs/getting-started/).
 
-need strava developer account
-follow instructions to create app and get id and secret
+Place the Investec and Strava secrets in an `.env` file:
 
-Subscribe to strava
+```
+verify_token="xxx"
+strava_client_id= "xxx"
+strava_client_secret= "xxx"
+investec_client_id = "xxx"
+investec_client_secret = "xxx"
+investec_current = "xxx"
+investec_savings = "xxx"
+```
 
-Install packages
+Prepare your python environment with (need [poetry](https://developers.strava.com/docs/getting-started/)):
 
-## Start server
+```
+poetry install
+```
 
-uvicorn main:app
-expose port with ngrok
+Run the server with:
+```
+poetry run uvicorn main:app
+```
 
+and if running locally,  expose a port with:
+
+```
+ngrok http 8000
+```
+
+Create a Strava subscription by running `utils.subscribe()` in a new python process.
+
+Then watch the updates come in.
