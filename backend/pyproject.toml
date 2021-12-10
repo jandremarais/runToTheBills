@@ -1,21 +1,19 @@
 [tool.poetry]
-name = "rttb-simple"
+name = "rttb-mongo"
 version = "0.1.0"
 description = ""
-authors = ["Jan Marais <maraisjandre9@gmail.com>"]
+authors = ["jan-marais <janmarais@shoprite.co.za>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
 fastapi = "^0.70.0"
-uvicorn = "^0.15.0"
-httpx = "^0.21.1"
+uvicorn = "^0.16.0"
+motor = "^2.5.1"
 python-dotenv = "^0.19.2"
-Jinja2 = "^3.0.3"
-python-multipart = "^0.0.5"
+httpx = "^0.21.1"
+black = "^21.12b0"
 
 [tool.poetry.dev-dependencies]
-black = "^21.11b1"
-ipykernel = "^6.6.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
